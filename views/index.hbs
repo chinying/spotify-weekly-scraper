@@ -1,0 +1,24 @@
+<a href="/login">Login to Spotify</a>
+
+<br />
+{{#if tokens}}
+  Token : {{auth_token}}
+  discover_url : {{dis}}
+  <br />
+  <h3>Tracks :</h3>
+  <table>
+  <tr>
+    <th>Song Title</th>
+    <th>Artist(s)</th>
+    <th>Album</th>
+  </tr>
+  {{#each tracks}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.artists}}</td>
+      <td>{{this.album}}</td>
+    </tr>
+  {{/each}}
+  </table>
+{{/if}}
+
